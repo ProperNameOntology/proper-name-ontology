@@ -43,6 +43,7 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.8.owl">
         <dc:identifier>PNO</dc:identifier>
+        <rdfs:comment>test test test</rdfs:comment>
         <owl:versionInfo>v1.8</owl:versionInfo>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:contributor>William R. Hogan</dc:contributor>
