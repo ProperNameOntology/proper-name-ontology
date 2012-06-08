@@ -43,7 +43,6 @@
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.8.owl">
         <dc:identifier>PNO</dc:identifier>
-        <rdfs:comment>test test test</rdfs:comment>
         <owl:versionInfo>v1.8</owl:versionInfo>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:contributor>William R. Hogan</dc:contributor>
@@ -345,7 +344,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <obo:IAO_0000115 xml:lang="en">A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity. </obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A proper name is an information content entity that is the outcome of a dubbing process and is used to designate  one specific instance of a type. It is shared by a group of people to refer to that individual entity. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -514,6 +513,22 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;FMA_55457"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                <owl:someValuesFrom rdf:resource="&obo;NCBITaxon_9606"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">http://en.wiktionary.org/wiki/utter</obo:IAO_0000119>
