@@ -189,36 +189,6 @@
     
 
 
-    <!-- http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.7.owl/PNO_0000000 -->
-
-    <owl:Class rdf:about="&proper_name_ontology_v12;PNO_0000000">
-        <rdfs:label xml:lang="en">utterance energy</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;pno_0000006"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
-                                <owl:someValuesFrom rdf:resource="&obo;pno_0000007"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                        <owl:allValuesFrom rdf:resource="&obo;pno_0000010"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;pno_0000006"/>
-        <obo:IAO_0000115 xml:lang="en">Sound energy bearing the concretization of an utterance and being the output of an uttering process. </obo:IAO_0000115>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/FMA_49443 -->
 
     <rdf:Description rdf:about="&obo;FMA_49443">
@@ -318,6 +288,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/pno_0000000 -->
+
+    <owl:Class rdf:about="&obo;pno_0000000">
+        <rdfs:label xml:lang="en">utterance energy</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;pno_0000006"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
+                                <owl:someValuesFrom rdf:resource="&obo;pno_0000007"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                        <owl:allValuesFrom rdf:resource="&obo;pno_0000010"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;pno_0000006"/>
+        <obo:IAO_0000115 xml:lang="en">Sound energy bearing the concretization of an utterance and being the output of an uttering process. </obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/pno_0000001 -->
 
     <owl:Class rdf:about="&obo;pno_0000001">
@@ -398,7 +398,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&Ontology1317751904226;BBO_0000062"/>
+                                    <rdf:Description rdf:about="&obo;pno_0000012"/>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&ro;has_participant"/>
                                         <owl:someValuesFrom>
@@ -485,7 +485,7 @@
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&proper_name_ontology_v12;PNO_0000000"/>
+                                    <rdf:Description rdf:about="&obo;pno_0000000"/>
                                     <rdf:Description rdf:about="&obo;pno_0000008"/>
                                 </owl:unionOf>
                             </owl:Class>
@@ -509,7 +509,7 @@
         <owl:equivalentClass>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&proper_name_ontology_v12;PNO_0000000"/>
+                <owl:someValuesFrom rdf:resource="&obo;pno_0000000"/>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
@@ -537,9 +537,9 @@
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl/BBO_0000062 -->
+    <!-- http://purl.obolibrary.org/obo/pno_0000012 -->
 
-    <owl:Class rdf:about="&Ontology1317751904226;BBO_0000062">
+    <owl:Class rdf:about="&obo;pno_0000012">
         <rdfs:label xml:lang="en">oscillating</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <dc:creator>Mathias Brochhausen</dc:creator>
