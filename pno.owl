@@ -3,6 +3,7 @@
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY FMA "http://purl.org/obo/owl/FMA#" >
+    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
@@ -16,6 +17,7 @@
     <!ENTITY www "http://www.proper_name_ontology.owl/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
     <!ENTITY Ontology1317751904226 "http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl/" >
     <!ENTITY proper_name_ontology_v12 "http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.7.owl/" >
     <!ENTITY proper_name_ontology_v1 "http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/" >
@@ -25,9 +27,10 @@
 <rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl#"
      xml:base="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
+     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:www="http://www.proper_name_ontology.owl/"
      xmlns:proper_name_ontology_v12="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.7.owl/"
      xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
@@ -39,19 +42,16 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:Ontology1317751904226="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:proper_name_ontology_v1="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="&obo;iao/pno.owl">
+        <dc:identifier>PNO</dc:identifier>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <dc:identifier>PNO</dc:identifier>
         <owl:versionInfo xml:lang="en">development version 19</owl:versionInfo>
         <dc:title xml:lang="en">proper name ontology</dc:title>
-        <owl:imports rdf:resource="http://proper-name-ontology.googlecode.com/files/FMA_to_PNO1.owl"/>
-        <owl:imports rdf:resource="http://proper-name-ontology.googlecode.com/files/IAO_to_PNO1.owl"/>
-        <owl:imports rdf:resource="http://proper-name-ontology.googlecode.com/files/OBI_to_PNO2.owl"/>
-        <owl:imports rdf:resource="http://proper-name-ontology.googlecode.com/files/PATO_to_pno.owl"/>
-        <owl:imports rdf:resource="http://purl.org/obo/owl/ro"/>
+        <owl:imports rdf:resource="&obo;iao/dev/iao.owl"/>
         <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
@@ -70,6 +70,7 @@
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000111"/>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000112"/>
     
 
 
@@ -92,6 +93,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000058"/>
     
 
 
@@ -178,6 +185,12 @@
     
 
 
+    <!-- http://www.obofoundry.org/ro/ro.owl#participates_in -->
+
+    <owl:ObjectProperty rdf:about="&ro;participates_in"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -191,49 +204,55 @@
 
     <!-- http://purl.obolibrary.org/obo/FMA_49443 -->
 
-    <rdf:Description rdf:about="&obo;FMA_49443">
+    <owl:Class rdf:about="&obo;FMA_49443">
+        <rdfs:label xml:lang="en">Anatomical cluster</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;FMA_67135"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/FMA_55457 -->
 
-    <rdf:Description rdf:about="&obo;FMA_55457">
+    <owl:Class rdf:about="&obo;FMA_55457">
+        <rdfs:label xml:lang="en">vocal fold</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;FMA_64854"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/FMA_64854 -->
 
-    <rdf:Description rdf:about="&obo;FMA_64854">
+    <owl:Class rdf:about="&obo;FMA_64854">
+        <rdfs:label xml:lang="en">Subdivision of larynx</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;FMA_64989"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/FMA_64989 -->
 
-    <rdf:Description rdf:about="&obo;FMA_64989">
+    <owl:Class rdf:about="&obo;FMA_64989">
+        <rdfs:label xml:lang="en">Heterogeneous cluster</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;FMA_49443"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/FMA_67135 -->
 
-    <rdf:Description rdf:about="&obo;FMA_67135">
+    <owl:Class rdf:about="&obo;FMA_67135">
+        <rdfs:label xml:lang="en">Anatomical structure</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;FMA_67165"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
     <!-- http://purl.obolibrary.org/obo/FMA_67165 -->
 
-    <rdf:Description rdf:about="&obo;FMA_67165">
+    <owl:Class rdf:about="&obo;FMA_67165">
+        <rdfs:label xml:lang="en">Material anatomical entity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -248,9 +267,9 @@
 
     <!-- http://purl.obolibrary.org/obo/IAO_0000178 -->
 
-    <rdf:Description rdf:about="&obo;IAO_0000178">
+    <owl:Class rdf:about="&obo;IAO_0000178">
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-    </rdf:Description>
+    </owl:Class>
     
 
 
@@ -385,7 +404,7 @@
                                                     <rdf:Description rdf:about="&snap;MaterialEntity"/>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="&ro;bearer_of"/>
-                                                        <owl:someValuesFrom rdf:resource="&obo;PATO_0001025"/>
+                                                        <owl:someValuesFrom rdf:resource="&PATO;PATO_0001025"/>
                                                     </owl:Restriction>
                                                 </owl:intersectionOf>
                                             </owl:Class>
@@ -501,9 +520,14 @@
 
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
 
-    <rdf:Description rdf:about="&obo;NCBITaxon_9606">
+    <owl:Class rdf:about="&obo;NCBITaxon_9606">
+        <rdfs:label xml:lang="en">Homo sapiens</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_9606"/>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100026"/>
-    </rdf:Description>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">human being</obo:IAO_0000118>
+        <obo:IAO_0000111 xml:lang="en">Homo sapiens</obo:IAO_0000111>
+        <obo:IAO_0000412 rdf:resource="&obo;ncbitaxon.owl"/>
+    </owl:Class>
     
 
 
@@ -518,18 +542,37 @@
 
     <!-- http://purl.obolibrary.org/obo/OBI_0100026 -->
 
-    <rdf:Description rdf:about="&obo;OBI_0100026">
+    <owl:Class rdf:about="&obo;OBI_0100026">
+        <rdfs:label xml:lang="en">organism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-    </rdf:Description>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &#39;other organisms&#39;)</obo:IAO_0000116>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">13-02-2009:
+OBI doesn&#39;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
+This issue is outside the scope of OBI.</obo:IAO_0000116>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">GROUP: OBI Biomaterial Branch</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">WEB: http://en.wikipedia.org/wiki/Organism</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">animal</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">fungus</obo:IAO_0000112>
+        <obo:IAO_0000111 xml:lang="en">organism</obo:IAO_0000111>
+        <obo:IAO_0000112 xml:lang="en">plant</obo:IAO_0000112>
+        <obo:IAO_0000112 xml:lang="en">virus</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000121"/>
+    </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/PATO_0001025 -->
+    <!-- http://purl.org/obo/owl/PATO#PATO_0001025 -->
 
-    <rdf:Description rdf:about="&obo;PATO_0001025">
+    <owl:Class rdf:about="&PATO;PATO_0001025">
         <rdfs:label xml:lang="en">pressure</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-    </rdf:Description>
+        <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
+        <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#attribute_slim"/>
+        <oboInOwl:hasDefinition>
+            <rdf:Description/>
+        </oboInOwl:hasDefinition>
+    </owl:Class>
 </rdf:RDF>
 
 
