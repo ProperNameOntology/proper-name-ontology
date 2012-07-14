@@ -52,7 +52,6 @@
         <owl:versionInfo xml:lang="en">development version 19</owl:versionInfo>
         <dc:title xml:lang="en">proper name ontology</dc:title>
         <owl:imports rdf:resource="&obo;iao/dev/iao.owl"/>
-        <owl:imports rdf:resource="http://www.ifomis.org/bfo/1.1"/>
     </owl:Ontology>
     
 
