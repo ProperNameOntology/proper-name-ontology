@@ -49,8 +49,8 @@
         <dc:identifier>PNO</dc:identifier>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <owl:versionInfo xml:lang="en">development version 19</owl:versionInfo>
         <dc:title xml:lang="en">proper name ontology</dc:title>
+        <owl:versionInfo xml:lang="en">release version 2012-07-17</owl:versionInfo>
         <owl:imports rdf:resource="&obo;iao/dev/iao.owl"/>
     </owl:Ontology>
     
@@ -97,7 +97,20 @@
 
     <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
 
-    <owl:ObjectProperty rdf:about="&obo;BFO_0000058"/>
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000058">
+        <rdfs:label xml:lang="en">is concretization of</rdfs:label>
+        <obo:IAO_0000118 xml:lang="en">concretization of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">concretization_of</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000058"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
+
+    <rdf:Description rdf:about="&obo;IAO_0000219">
+        <owl:equivalentProperty rdf:resource="&obo;IAO_0020012"/>
+    </rdf:Description>
     
 
 
@@ -277,10 +290,18 @@
     <owl:Class rdf:about="&obo;IAO_0020000">
         <rdfs:label xml:lang="en">proper name</rdfs:label>
         <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0020010"/>
-            </owl:Restriction>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom rdf:resource="&bfo;Entity"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                        <owl:allValuesFrom rdf:resource="&obo;IAO_0020010"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
