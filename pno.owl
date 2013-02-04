@@ -186,11 +186,17 @@
     
 
 
-    <!-- http://www.obofoundry.org/ro/ro.owl#bearer_of -->
+    <!-- http://purl.org/obo/owl/OBO_REL#bearer_of -->
 
-    <owl:ObjectProperty rdf:about="&ro;bearer_of">
+    <owl:ObjectProperty rdf:about="&OBO_REL;bearer_of">
         <rdfs:label xml:lang="en">bearer_of</rdfs:label>
     </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.org/obo/owl/OBO_REL#inheres_in -->
+
+    <owl:ObjectProperty rdf:about="&OBO_REL;inheres_in"/>
     
 
 
@@ -198,14 +204,6 @@
 
     <owl:ObjectProperty rdf:about="&ro;has_participant">
         <rdfs:label>has_participant</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.obofoundry.org/ro/ro.owl#inheres_in -->
-
-    <owl:ObjectProperty rdf:about="&ro;inheres_in">
-        <rdfs:label xml:lang="en">inheres_in</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -383,7 +381,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0000178"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
@@ -421,7 +419,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0020006"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                         <owl:someValuesFrom rdf:resource="&obo;IAO_0020003"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -437,7 +435,7 @@
                                                 <owl:intersectionOf rdf:parseType="Collection">
                                                     <rdf:Description rdf:about="&snap;MaterialEntity"/>
                                                     <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                                                         <owl:someValuesFrom rdf:resource="&PATO;PATO_0001025"/>
                                                     </owl:Restriction>
                                                 </owl:intersectionOf>
@@ -467,7 +465,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0020007"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
