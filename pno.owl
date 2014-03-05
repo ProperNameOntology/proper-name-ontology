@@ -46,9 +46,9 @@
      xmlns:proper_name_ontology_v1="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="&obo;iao/pno.owl">
-        <dc:identifier>PNO</dc:identifier>
-        <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:contributor>William R. Hogan</dc:contributor>
+        <dc:identifier>PNO</dc:identifier>
         <dc:title xml:lang="en">proper name ontology</dc:title>
         <owl:versionInfo xml:lang="en">release version 2012-09-04</owl:versionInfo>
         <owl:versionInfo xml:lang="en">upload test</owl:versionInfo>
@@ -65,23 +65,62 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000111"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000111 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000111">
+        <rdfs:label>editor preferred term</rdfs:label>
+        <rdfs:label xml:lang="en">editor preferred label</rdfs:label>
+        <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000112 -->
+
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000112"/>
     
 
 
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
+    <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000116 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000116"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000117 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000117"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/IAO_0000412 -->
+
+    <rdf:Description rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#label -->
+
+    <rdf:Description rdf:about="&rdfs;label">
+        <rdfs:label>label</rdfs:label>
+    </rdf:Description>
     
 
 
@@ -99,10 +138,26 @@
     <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000058">
-        <rdfs:label xml:lang="en">is concretization of</rdfs:label>
-        <obo:IAO_0000118 xml:lang="en">concretization of</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">concretization_of</obo:IAO_0000118>
-        <rdfs:subPropertyOf rdf:resource="&obo;BFO_0000058"/>
+        <rdfs:label xml:lang="en">is concretized as</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 xml:lang="en">is concretized as</obo:IAO_0000111>
+        <owl:inverseOf rdf:resource="&obo;BFO_0000059"/>
+        <rdfs:domain rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000059">
+        <rdfs:label xml:lang="en">concretizes</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 xml:lang="en">concretizes</obo:IAO_0000111>
+        <rdfs:range rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:domain rdf:resource="&snap;SpecificallyDependentContinuant"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -317,9 +372,9 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity. </obo:IAO_0000115>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -329,10 +384,10 @@
     <owl:Class rdf:about="&obo;IAO_0020001">
         <rdfs:label xml:lang="en">grapheme</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Grapheme</obo:IAO_0000119>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">A grapheme  is an information content entity that is a fundamental unit in a written language. </obo:IAO_0000115>
-        <obo:IAO_0000112 xml:lang="en">alphabetic letters, Chinese characters, numerical digits, punctuation marks, and the individual symbols of any of the world&#39;s writing systems</obo:IAO_0000112>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <obo:IAO_0000112 xml:lang="en">alphabetic letters, Chinese characters, numerical digits, punctuation marks, and the individual symbols of any of the world&apos;s writing systems</obo:IAO_0000112>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Grapheme</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -342,10 +397,10 @@
     <owl:Class rdf:about="&obo;IAO_0020002">
         <rdfs:label xml:lang="en">utterance</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
-        <obo:IAO_0000115 xml:lang="en">An utterance is an information content entity that is a complete unit of speech in spoken language. </obo:IAO_0000115>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119>Wikipedia: http://en.wikipedia.org/wiki/Utterance</obo:IAO_0000119>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An utterance is an information content entity that is a complete unit of speech in spoken language. </obo:IAO_0000115>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -355,8 +410,8 @@
     <owl:Class rdf:about="&obo;IAO_0020003">
         <rdfs:label xml:lang="en">mechanical wave quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">An attributive collection of qualities inhering in energy when transported through a medium in a wave.</obo:IAO_0000115>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -366,8 +421,8 @@
     <owl:Class rdf:about="&obo;IAO_0020004">
         <rdfs:label xml:lang="en">writing quality</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">is a quality that is the concretization of graphemes and inheres in a material object.</obo:IAO_0000115>
     </owl:Class>
     
@@ -385,7 +440,7 @@
                         <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000059"/>
                                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020001"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -394,8 +449,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000178"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <dc:creator>Mathias Brochhausen</dc:creator>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">is a material information bearer that bears the concretization of graphemes.</obo:IAO_0000115>
         <obo:IAO_0000112 xml:lang="en">pieces of paper, tables, walls, floors, driveways, highway signs, computer screens, skin, tablets of clay, rocks, sheets of metal (license plates), sheets of papyrus, etc.   clouds of smoke in skywriting,</obo:IAO_0000112>
     </owl:Class>
@@ -451,8 +506,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020006"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">Energy that is transported in a sound wave.</obo:IAO_0000115>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -469,7 +524,7 @@
                         <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000058"/>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000059"/>
                                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020002"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -493,8 +548,8 @@
         <rdfs:label xml:lang="en">oscillating</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Oscillation</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">Oscillating is a processual that shows repetitive variation, typically in time, of some measured quality about a central value (often a point of equilibrium) or between two or more different states.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Oscillation</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -510,9 +565,9 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -528,8 +583,8 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000119 xml:lang="en">http://en.wiktionary.org/wiki/utter</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">is a planned process of making speech sounds which may or may not have an actual language involved. </obo:IAO_0000115>
     </owl:Class>
@@ -552,10 +607,10 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A personal name is a proper name identifying an individual person.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Personal names &quot;today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.&quot; (http://en.wikipedia.org/wiki/Personal_name)</rdfs:comment>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Personal_name</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A personal name is a proper name identifying an individual person.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Personal names &quot;today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.&quot; (http://en.wikipedia.org/wiki/Personal_name)</rdfs:comment>
     </owl:Class>
     
 
@@ -571,9 +626,9 @@
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A given name, in Western contexts often referred to as a first name, is a personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child&#39;s parents at or near birth, in contrast to an inherited one such as a family name</obo:IAO_0000115>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Given_name</obo:IAO_0000119>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A given name, in Western contexts often referred to as a first name, is a personal name that specifies and differentiates between members of a group of individuals, especially in a family, all of whose members usually share the same family name (surname). A given name is purposefully given, usually by a child&apos;s parents at or near birth, in contrast to an inherited one such as a family name</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -589,9 +644,9 @@
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Family_name</obo:IAO_0000119>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A family name (in Western contexts often referred to as a surname or last name) is typically a part of a person&#39;s name which has been passed, according to law or custom, from one or both parents to their children.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A family name (in Western contexts often referred to as a surname or last name) is typically a part of a person&apos;s name which has been passed, according to law or custom, from one or both parents to their children.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Family_name</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -623,9 +678,9 @@
     <owl:Class rdf:about="&obo;OBI_0100026">
         <rdfs:label xml:lang="en">organism</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <obo:IAO_0000116 rdf:datatype="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &#39;other organisms&#39;)</obo:IAO_0000116>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &apos;other organisms&apos;)</obo:IAO_0000116>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">13-02-2009:
-OBI doesn&#39;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
+OBI doesn&apos;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
 This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">GROUP: OBI Biomaterial Branch</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A material entity that is an individual living system, such as animal, plant, bacteria or virus, that is capable of replicating or reproducing, growth and maintenance in the right environment. An organism may be unicellular or made up, like humans, of many billions of cells divided into specialized tissues and organs.</obo:IAO_0000115>
@@ -655,5 +710,5 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
 
