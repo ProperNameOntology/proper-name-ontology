@@ -45,13 +45,12 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:proper_name_ontology_v1="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="&obo;iao/pno.owl">
+    <owl:Ontology rdf:about="&obo;iao/pno/2014-03-05/pno.owl">
+        <owl:versionInfo xml:lang="en">2014-03-05 (release)</owl:versionInfo>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <dc:contributor>William R. Hogan</dc:contributor>
         <dc:identifier>PNO</dc:identifier>
+        <dc:contributor>William R. Hogan</dc:contributor>
         <dc:title xml:lang="en">proper name ontology</dc:title>
-        <owl:versionInfo xml:lang="en">release version 2012-09-04</owl:versionInfo>
-        <owl:versionInfo xml:lang="en">upload test</owl:versionInfo>
         <owl:imports rdf:resource="&obo;iao/dev/iao.owl"/>
     </owl:Ontology>
     
