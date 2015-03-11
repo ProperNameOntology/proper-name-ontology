@@ -52,7 +52,6 @@
         <dc:title xml:lang="en">proper name ontology</dc:title>
         <owl:versionInfo xml:lang="en">release version 2012-09-04</owl:versionInfo>
         <owl:versionInfo xml:lang="en">upload test</owl:versionInfo>
-        <owl:imports rdf:resource="&obo;iao.owl"/>
     </owl:Ontology>
     
 
