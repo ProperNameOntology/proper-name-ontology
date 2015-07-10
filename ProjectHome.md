@@ -1,0 +1,1 @@
+A realist representation of proper names for re-use in biomedical ontologies and other ontologies re-using BFO and other OBO Foundry.
