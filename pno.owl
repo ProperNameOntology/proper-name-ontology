@@ -2,48 +2,24 @@
 
 
 <!DOCTYPE rdf:RDF [
-    <!ENTITY FMA "http://purl.org/obo/owl/FMA#" >
-    <!ENTITY PATO "http://purl.org/obo/owl/PATO#" >
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
-    <!ENTITY bfo "http://www.ifomis.org/bfo/1.1#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
-    <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY NCBITaxon "http://purl.org/obo/owl/NCBITaxon#" >
-    <!ENTITY span "http://www.ifomis.org/bfo/1.1/span#" >
-    <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
-    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
-    <!ENTITY www "http://www.proper_name_ontology.owl/" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
     <!ENTITY oboInOwl "http://www.geneontology.org/formats/oboInOwl#" >
-    <!ENTITY Ontology1317751904226 "http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl/" >
-    <!ENTITY proper_name_ontology_v12 "http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.7.owl/" >
-    <!ENTITY proper_name_ontology_v1 "http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl#"
-     xml:base="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl"
-     xmlns:proper_name_ontology_v1="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.4.owl/"
+<rdf:RDF xmlns="&obo;iao/pno.owl#"
+     xml:base="&obo;iao/pno.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:PATO="http://purl.org/obo/owl/PATO#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:bfo="http://www.ifomis.org/bfo/1.1#"
-     xmlns:NCBITaxon="http://purl.org/obo/owl/NCBITaxon#"
-     xmlns:proper_name_ontology_v12="http://proper-name-ontology.googlecode.com/files/proper_name_ontology_v1.7.owl/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:www="http://www.proper_name_ontology.owl/"
-     xmlns:Ontology1317751904226="http://www.semanticweb.org/ontologies/2011/9/Ontology1317751904226.owl/"
-     xmlns:FMA="http://purl.org/obo/owl/FMA#"
-     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
-     xmlns:span="http://www.ifomis.org/bfo/1.1/span#"
-     xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="&obo;iao/pno.owl">
         <dc:identifier>PNO</dc:identifier>
@@ -52,6 +28,8 @@
         <dc:title xml:lang="en">proper name ontology</dc:title>
         <owl:versionInfo xml:lang="en">release version 2012-09-04</owl:versionInfo>
         <owl:versionInfo xml:lang="en">upload test</owl:versionInfo>
+        <owl:imports rdf:resource="&obo;bfo/2014-05-03/classes-only.owl"/>
+        <owl:imports rdf:resource="&obo;ro/releases/2015-02-11/core.owl"/>
     </owl:Ontology>
     
 
@@ -83,6 +61,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000114 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000114"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000115 -->
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000115"/>
@@ -101,6 +85,12 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0000118 -->
+
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000118"/>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0000119 -->
 
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000119"/>
@@ -112,6 +102,30 @@
     <rdf:Description rdf:about="&obo;IAO_0000412">
         <rdfs:label xml:lang="en">imported from</rdfs:label>
     </rdf:Description>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="&dc;creator"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasDefinition -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasDefinition"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#hasOBONamespace -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;hasOBONamespace"/>
+    
+
+
+    <!-- http://www.geneontology.org/formats/oboInOwl#inSubset -->
+
+    <owl:AnnotationProperty rdf:about="&oboInOwl;inSubset"/>
     
 
 
@@ -134,38 +148,9 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/BFO_0000058 -->
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
 
-    <owl:ObjectProperty rdf:about="&obo;BFO_0000058">
-        <rdfs:label xml:lang="en">is concretized as</rdfs:label>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
-        <obo:IAO_0000111 xml:lang="en">is concretized as</obo:IAO_0000111>
-        <owl:inverseOf rdf:resource="&obo;BFO_0000059"/>
-        <rdfs:domain rdf:resource="&snap;GenericallyDependentContinuant"/>
-        <rdfs:range rdf:resource="&snap;SpecificallyDependentContinuant"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/BFO_0000059 -->
-
-    <owl:ObjectProperty rdf:about="&obo;BFO_0000059">
-        <rdfs:label xml:lang="en">concretizes</rdfs:label>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
-        <obo:IAO_0000111 xml:lang="en">concretizes</obo:IAO_0000111>
-        <rdfs:range rdf:resource="&snap;GenericallyDependentContinuant"/>
-        <rdfs:domain rdf:resource="&snap;SpecificallyDependentContinuant"/>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/IAO_0000219 -->
-
-    <rdf:Description rdf:about="&obo;IAO_0000219">
-        <owl:equivalentProperty rdf:resource="&obo;IAO_0020012"/>
-    </rdf:Description>
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000050"/>
     
 
 
@@ -177,8 +162,9 @@
         <rdfs:label xml:lang="en">designates</rdfs:label>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">x designates y, if for any given group of language users, x is an information content entity, is about y, and represents y in a linguistic context..</obo:IAO_0000115>
+        <rdfs:range rdf:resource="&obo;BFO_0000001"/>
         <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
-        <rdfs:range rdf:resource="&bfo;Entity"/>
+        <owl:inverseOf rdf:resource="&obo;IAO_0020018"/>
     </owl:ObjectProperty>
     
 
@@ -191,8 +177,8 @@
         <rdfs:label xml:lang="en">is_borrowed_reference_to</rdfs:label>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">x is_borrowed_reference_for y, if x is a proper name that is used to refer to one individual among a specific group after the dubbing process took place.</obo:IAO_0000115>
+        <rdfs:range rdf:resource="&obo;BFO_0000001"/>
         <rdfs:domain rdf:resource="&obo;IAO_0020000"/>
-        <rdfs:range rdf:resource="&bfo;Entity"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -218,7 +204,6 @@
         <rdfs:label xml:lang="en">is designated by</rdfs:label>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">p1 is designated by p2, if p2 is an information content entity that represents p1 in a linguistic context.</obo:IAO_0000115>
-        <owl:inverseOf rdf:resource="&obo;IAO_0020012"/>
     </owl:ObjectProperty>
     
 
@@ -241,31 +226,58 @@
     
 
 
-    <!-- http://purl.org/obo/owl/OBO_REL#bearer_of -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000052 -->
 
-    <owl:ObjectProperty rdf:about="&OBO_REL;bearer_of">
+    <owl:ObjectProperty rdf:about="&obo;RO_0000052"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000053">
         <rdfs:label xml:lang="en">bearer_of</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://purl.org/obo/owl/OBO_REL#inheres_in -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000056 -->
 
-    <owl:ObjectProperty rdf:about="&OBO_REL;inheres_in"/>
+    <owl:ObjectProperty rdf:about="&obo;RO_0000056"/>
     
 
 
-    <!-- http://www.obofoundry.org/ro/ro.owl#has_participant -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000057 -->
 
-    <owl:ObjectProperty rdf:about="&ro;has_participant">
+    <owl:ObjectProperty rdf:about="&obo;RO_0000057">
         <rdfs:label>has_participant</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- http://www.obofoundry.org/ro/ro.owl#participates_in -->
+    <!-- http://purl.obolibrary.org/obo/RO_0000058 -->
 
-    <owl:ObjectProperty rdf:about="&ro;participates_in"/>
+    <owl:ObjectProperty rdf:about="&obo;RO_0000058">
+        <rdfs:label xml:lang="en">is concretized as</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 xml:lang="en">is concretized as</obo:IAO_0000111>
+        <rdfs:range rdf:resource="&obo;BFO_0000020"/>
+        <rdfs:domain rdf:resource="&obo;BFO_0000031"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0000059">
+        <rdfs:label xml:lang="en">concretizes</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 xml:lang="en">concretizes</obo:IAO_0000111>
+        <rdfs:domain rdf:resource="&obo;BFO_0000020"/>
+        <rdfs:range rdf:resource="&obo;BFO_0000031"/>
+        <owl:inverseOf rdf:resource="&obo;RO_0000058"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
     
 
 
@@ -277,6 +289,48 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000001 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000001"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000004 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000004"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000015 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000015"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000019 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000019"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000020 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000020"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000031 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000031"/>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000040 -->
+
+    <owl:Class rdf:about="&obo;BFO_0000040"/>
     
 
 
@@ -329,7 +383,7 @@
 
     <owl:Class rdf:about="&obo;FMA_67165">
         <rdfs:label xml:lang="en">Material anatomical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
     </owl:Class>
     
 
@@ -338,7 +392,7 @@
 
     <owl:Class rdf:about="&obo;IAO_0000030">
         <rdfs:label>information content entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;GenericallyDependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000031"/>
     </owl:Class>
     
 
@@ -346,7 +400,7 @@
     <!-- http://purl.obolibrary.org/obo/IAO_0000178 -->
 
     <owl:Class rdf:about="&obo;IAO_0000178">
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
     </owl:Class>
     
 
@@ -361,7 +415,7 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
-                        <owl:someValuesFrom rdf:resource="&bfo;Entity"/>
+                        <owl:someValuesFrom rdf:resource="&obo;BFO_0000001"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
@@ -371,9 +425,9 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity. </obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -398,8 +452,8 @@
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="en">An utterance is an information content entity that is a complete unit of speech in spoken language. </obo:IAO_0000115>
         <obo:IAO_0000119>Wikipedia: http://en.wikipedia.org/wiki/Utterance</obo:IAO_0000119>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -408,7 +462,7 @@
 
     <owl:Class rdf:about="&obo;IAO_0020003">
         <rdfs:label xml:lang="en">mechanical wave quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000115 xml:lang="en">An attributive collection of qualities inhering in energy when transported through a medium in a wave.</obo:IAO_0000115>
         <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
@@ -419,9 +473,9 @@
 
     <owl:Class rdf:about="&obo;IAO_0020004">
         <rdfs:label xml:lang="en">writing quality</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">is a quality that is the concretization of graphemes and inheres in a material object.</obo:IAO_0000115>
     </owl:Class>
     
@@ -436,10 +490,10 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0000178"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000059"/>
+                                <owl:onProperty rdf:resource="&obo;RO_0000059"/>
                                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020001"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -448,8 +502,8 @@
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000178"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <dc:creator>Mathias Brochhausen</dc:creator>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">is a material information bearer that bears the concretization of graphemes.</obo:IAO_0000115>
         <obo:IAO_0000112 xml:lang="en">pieces of paper, tables, walls, floors, driveways, highway signs, computer screens, skin, tablets of clay, rocks, sheets of metal (license plates), sheets of papyrus, etc.   clouds of smoke in skywriting,</obo:IAO_0000112>
     </owl:Class>
@@ -460,7 +514,7 @@
 
     <owl:Class rdf:about="&obo;IAO_0020006">
         <rdfs:label xml:lang="en">portion of energy</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000004"/>
     </owl:Class>
     
 
@@ -474,24 +528,24 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0020006"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
                         <owl:someValuesFrom rdf:resource="&obo;IAO_0020003"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000056"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <rdf:Description rdf:about="&obo;IAO_0020009"/>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                        <owl:onProperty rdf:resource="&obo;RO_0000057"/>
                                         <owl:someValuesFrom>
                                             <owl:Class>
                                                 <owl:intersectionOf rdf:parseType="Collection">
-                                                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                                                    <rdf:Description rdf:about="&obo;BFO_0000040"/>
                                                     <owl:Restriction>
-                                                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                                                        <owl:someValuesFrom rdf:resource="&PATO;PATO_0001025"/>
+                                                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
+                                                        <owl:someValuesFrom rdf:resource="http://purl.org/obo/owl/PATO#PATO_0001025"/>
                                                     </owl:Restriction>
                                                 </owl:intersectionOf>
                                             </owl:Class>
@@ -520,10 +574,10 @@
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0020007"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                        <owl:onProperty rdf:resource="&obo;RO_0000053"/>
                         <owl:someValuesFrom>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000059"/>
+                                <owl:onProperty rdf:resource="&obo;RO_0000059"/>
                                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020002"/>
                             </owl:Restriction>
                         </owl:someValuesFrom>
@@ -545,7 +599,7 @@
 
     <owl:Class rdf:about="&obo;IAO_0020009">
         <rdfs:label xml:lang="en">oscillating</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Oscillation</obo:IAO_0000119>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000115 xml:lang="en">Oscillating is a processual that shows repetitive variation, typically in time, of some measured quality about a central value (often a point of equilibrium) or between two or more different states.</obo:IAO_0000115>
@@ -565,8 +619,8 @@
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity.</obo:IAO_0000115>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -582,8 +636,8 @@
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator>Mathias Brochhausen</dc:creator>
         <obo:IAO_0000119 xml:lang="en">http://en.wiktionary.org/wiki/utter</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">is a planned process of making speech sounds which may or may not have an actual language involved. </obo:IAO_0000115>
     </owl:Class>
@@ -621,7 +675,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -639,7 +693,7 @@
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0020015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -667,7 +721,7 @@
 
     <owl:Class rdf:about="&obo;OBI_0000011">
         <rdfs:label>planned process</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000015"/>
     </owl:Class>
     
 
@@ -676,7 +730,7 @@
 
     <owl:Class rdf:about="&obo;OBI_0100026">
         <rdfs:label xml:lang="en">organism</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000040"/>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &apos;other organisms&apos;)</obo:IAO_0000116>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">13-02-2009:
 OBI doesn&apos;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
@@ -696,9 +750,9 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <!-- http://purl.org/obo/owl/PATO#PATO_0001025 -->
 
-    <owl:Class rdf:about="&PATO;PATO_0001025">
+    <owl:Class rdf:about="http://purl.org/obo/owl/PATO#PATO_0001025">
         <rdfs:label xml:lang="en">pressure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <rdfs:subClassOf rdf:resource="&obo;BFO_0000019"/>
         <oboInOwl:hasOBONamespace>quality</oboInOwl:hasOBONamespace>
         <oboInOwl:inSubset rdf:resource="http://purl.org/obo/owl/obo#attribute_slim"/>
         <oboInOwl:hasDefinition>
@@ -709,5 +763,5 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
 
 
-<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.5.1) http://owlapi.sourceforge.net -->
 
