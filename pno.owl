@@ -21,7 +21,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="&obo;iao/pno/bfo2/pno..owl">
+    <owl:Ontology rdf:about="&obo;iao/pno/bfo2/pno.owl">
         <dc:identifier>PNO</dc:identifier>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
