@@ -22,14 +22,14 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
     <owl:Ontology rdf:about="&obo;iao/pno/bfo2/pno.owl">
-        <dc:identifier>PNO</dc:identifier>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:identifier>PNO</dc:identifier>
         <dc:title xml:lang="en">proper name ontology</dc:title>
         <owl:versionInfo xml:lang="en">release version 2012-09-04</owl:versionInfo>
         <owl:versionInfo xml:lang="en">upload test</owl:versionInfo>
         <owl:imports rdf:resource="&obo;bfo/2014-05-03/classes-only.owl"/>
-        <owl:imports rdf:resource="&obo;ro/releases/2015-02-11/core.owl"/>
+        <owl:imports rdf:resource="&obo;ro/core.owl"/>
     </owl:Ontology>
     
 
