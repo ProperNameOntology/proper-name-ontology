@@ -28,7 +28,6 @@
         <dc:creator>Mathias Brochhausen</dc:creator>
         <owl:versionInfo xml:lang="en">development version May 25, 2016</owl:versionInfo>
         <dc:title xml:lang="en">proper name ontology</dc:title>
-        <owl:imports rdf:resource="&obo;bfo/2014-05-03/classes-only.owl"/>
         <owl:imports rdf:resource="&obo;iao/2015-02-23/iao.owl"/>
         <owl:imports rdf:resource="&obo;ro/core.owl"/>
     </owl:Ontology>
