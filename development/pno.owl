@@ -101,6 +101,16 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0020019 -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0020019">
+        <obo:IAO_0000111 xml:lang="en">instance unique identifier</obo:IAO_0000111>
+        <rdfs:comment xml:lang="en">An annotation to be applied to individuals only.  Value is a GUID/UUID for use in a referent tracking system.</rdfs:comment>
+        <rdfs:label>IUI</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/IAO_0100001 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/IAO_0100001"/>
