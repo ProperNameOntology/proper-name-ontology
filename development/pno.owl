@@ -1,26 +1,26 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl/"
      xml:base="http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl/"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:protege="http://protege.stanford.edu/plugins/owl/protege#"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/iao/pno/dev/pno.owl"/>
         <owl:imports rdf:resource="http://purl.obolibrary.org/obo/iao/2017-03-24/iao.owl"/>
-        <owl:versionInfo xml:lang="en">development February 21, 2019</owl:versionInfo>
-        <dc:title xml:lang="en">proper name ontology</dc:title>
-        <dc:identifier>PNO</dc:identifier>
-        <dc:license>http://creativecommons.org/licenses/by/4.0/</dc:license>
+        <obo:IAO_0000597>IAO_0020000-IAO_0020999</obo:IAO_0000597>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
-        <obo:IAO_0000597>IAO_0020000-IAO_0020999</obo:IAO_0000597>
+        <dc:identifier>PNO</dc:identifier>
+        <dc:license rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://creativecommons.org/licenses/by/4.0/</dc:license>
+        <dc:title xml:lang="en">proper name ontology</dc:title>
+        <owl:versionInfo xml:lang="en">development April 18, 2020</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -671,6 +671,40 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/IAO_0020020 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0020020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000310"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A document that is a collection of identifiers that has been created to identify and annotate core ideas of a specified domain, and where the intention of its creators is that the identifiers have a one-to-one correspondence with entities in reality outside the aggregate.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">code system</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">codeset</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">coding system</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">controlled vocabulary</obo:IAO_0000118>
+        <dc:contributor>Clint Dowland</dc:contributor>
+        <dc:contributor>Matt Diller</dc:contributor>
+        <dc:contributor>Sarah Bost</dc:contributor>
+        <dc:contributor>William R. Hogan</dc:contributor>
+        <rdfs:comment xml:lang="en">Does not imply absence vs. presence of any taxonomy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Does not imply that identifiers denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities (e.g., SNOMED and even various OBO ontologies have identifiers that identify entities in all three categories).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Each identifier is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
+
+When there is no such string, it is almost always because the identifiers take the form of human language words. For example, a “sex” or “gender” code set could have identifiers “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean).</rdfs:comment>
+        <rdfs:comment xml:lang="en">For National Drug Codes (NDCs) and similar code sets, there doesn’t even have to be a single, fully-concretized copy somewhere (for example, for NDCs there is no centralized database or repository where they all live as one instance of concretization of code set). The code set can be “distributively” concretized. This seems like an unusual exception, but it also likely applies to Universal Product Codes (UPCs) and their follow on Global Trade Item Numbers (GTINs).</rdfs:comment>
+        <rdfs:comment xml:lang="en">For each given domain, there can potentially exist multiple code sets. The multiplicity of code sets is partially due to the different specific purposes of those code sets.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Many code sets are created for a specific purpose in addition to merely identifying and annotating core ideas of a specified domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The identifiers do not denote each other.</rdfs:comment>
+        <rdfs:label xml:lang="en">code set</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/NCBITaxon_9606 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606">
@@ -720,5 +754,5 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
 
 
-<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
