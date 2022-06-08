@@ -688,11 +688,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0020000"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">An information content entity that is a collection of identifiers that has been created to identify and annotate core ideas of a specified domain, and where the intention of its creators is that the identifiers have a one-to-one correspondence with entities in reality outside the aggregate.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An information content entity that is a collection of other information content entities that has been created to identify or annotate core ideas of a specified domain, and where the intention of its creators is that the aggregated entities have a one-to-one correspondence with entities in reality outside the aggregate.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">code map</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">code system</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">codeset</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">coding system</obo:IAO_0000118>
@@ -702,14 +703,14 @@
         <dc:contributor>Sarah Bost</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
         <rdfs:comment xml:lang="en">Does not imply absence vs. presence of any taxonomy.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Does not imply that identifiers denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities (e.g., SNOMED and even various OBO ontologies have identifiers that identify entities in all three categories).</rdfs:comment>
-        <rdfs:comment xml:lang="en">Each identifier is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
+        <rdfs:comment xml:lang="en">Does not imply that aggregated entities denote particulars, universals, or defined classes (a.k.a. attributive collections) or even that they denote only one of these three types of entities.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Each aggregated entity is often (but not necessarily) associated with a text string—variously called a “description,” “name,” “title,” or “label”—that helps humans reach the target of denotation.
 
-When there is no such string, it is almost always because the identifiers take the form of human language words. For example, a “sex” or “gender” code set could have identifiers “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean).</rdfs:comment>
+When there is no such string, it is almost always because the entities take the form of human language words. For example, a “sex” or “gender” code set could contain “MALE” and “FEMALE,” or even “M” and “F” (by convention, we understand what these mean).</rdfs:comment>
         <rdfs:comment xml:lang="en">For National Drug Codes (NDCs) and similar code sets, there doesn’t even have to be a single, fully-concretized copy somewhere (for example, for NDCs there is no centralized database or repository where they all live as one instance of concretization of code set). The code set can be “distributively” concretized. This seems like an unusual exception, but it also likely applies to Universal Product Codes (UPCs) and their follow on Global Trade Item Numbers (GTINs).</rdfs:comment>
         <rdfs:comment xml:lang="en">For each given domain, there can potentially exist multiple code sets. The multiplicity of code sets is partially due to the different specific purposes of those code sets.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Many code sets are created for a specific purpose in addition to merely identifying and annotating core ideas of a specified domain.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The identifiers do not denote each other.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Many code sets are created for a specific purpose in addition to merely identifying or annotating core ideas of a specified domain.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The information content entities do not denote each other.</rdfs:comment>
         <rdfs:label xml:lang="en">code set</rdfs:label>
     </owl:Class>
     
